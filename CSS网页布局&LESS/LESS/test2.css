@@ -1,0 +1,33 @@
+.box_02 {
+  width: 300px;
+  height: 400px;
+  background-color: blue;
+}
+.list {
+  width: 600px;
+  margin: 40px auto;
+  background-color: beige;
+  padding: 0 20px;
+  list-style: none;
+}
+.list li {
+  height: 30px;
+  line-height: 30px;
+  background-color: pink;
+  margin-bottom: 5px;
+}
+.list a {
+  float: left;
+}
+.list a:hover {
+  color: red;
+}
+.list span {
+  float: right;
+}
+.test_03 {
+  width: calc(300px - 30px);
+  height: 300px;
+  background-color: deepskyblue;
+  margin: 0 auto;
+}

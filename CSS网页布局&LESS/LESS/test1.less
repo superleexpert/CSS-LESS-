@@ -1,0 +1,53 @@
+body{
+    background-color: cadetblue;
+}
+
+//a = 12;
+// 变量
+@test_width: 300px;
+
+.box {
+  width: @test_width;
+  height: @test_width;
+  background-color: black;
+
+  // 混合
+  .border;
+}
+
+.border {
+  border: solid 5px brown;
+}
+
+.box2 {
+  .box;
+  margin-left: 100px;
+}
+
+// 混合，可带参数
+.border_2(@border_width){
+  border: solid yellow @border_width;
+}
+
+.test_hunhe{
+  .border_2(30px);
+}
+
+.border_3(@border_width:10px){
+  border: solid yellow @border_width;
+}
+
+.test_hunhe3{
+  .border_3();
+}
+
+.sanjiao{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 100px;
+  border-style: solid;
+  border-color: yellow transparent transparent transparent;
+}
+
+// 匹配模式

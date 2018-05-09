@@ -1,0 +1,50 @@
+// 运算
+@test_01: 300px;
+
+.box_02{
+    width: @test_01;
+    height: @test_01 + 100;
+    background-color: blue;
+}
+
+// 嵌套规则
+.list{
+    width: 600px;
+    margin: 40px auto;
+    background-color: beige;
+    padding: 0 20px;
+    list-style: none;
+
+    li{
+        height: 30px;
+        line-height: 30px;
+        background-color: pink;
+        margin-bottom: 5px;
+    }
+    a{
+        float: left;
+        //&代表他的上一层选择器
+        &:hover{
+            color: red;
+        }
+    }
+    span{
+        float: right;
+    }
+}
+
+//arguments变量
+// @argument包含了所有传递进来的参数
+// 如果不想单独处理每一个参数的话就可以这样写
+
+//避免编译
+.test_03{
+    // width: 300px;
+    // ~可以防止编译
+    width: ~'calc(300px - 30px)';
+    height: @test_01;
+    background-color: deepskyblue;
+    margin: 0 auto;
+}
+
+// !important 设置优先级最高
